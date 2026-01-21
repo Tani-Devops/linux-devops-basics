@@ -110,4 +110,5 @@ for dir in /etc /var /tmp; do
   ls "$dir" | head -n 5 | tee -a logs/logfile.log
 done
 
+![CI](https://github.com/Tani-Devops/linux-docker-basics/actions/workflows/ci.yml/badge.svg)
 
