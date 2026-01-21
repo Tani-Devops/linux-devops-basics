@@ -11,17 +11,17 @@ jobs:
 
     steps:
       - name: Checkout repository
-      - uses: actions/checkou@v4
+        uses: actions/checkout@v4
 
       - name: Set up Docker
-        uses: docker/setup-buildx-actions@v3
+        uses: docker/setup-buildx-action@v3
 
       - name: Build Docker image
         run: |
           docker build \
-           -f docker/Dockerfile \
-           -t linux-docker-basics:day9 \
-           .
+            -f docker/Dockerfile \
+            -t linux-devops-basics:day9 \
+            .
 
       - name: Verify Docker image
         run: docker images
