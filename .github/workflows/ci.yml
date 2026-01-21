@@ -1,0 +1,22 @@
+name: Linux DevOps CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+      - uses: actions/checkou@v4
+
+      - name: Build docker image
+        run: |
+        docker build -t linux-devops-basics
+-f docker/Dockerfile
+
+     - name: Verify docker image
+       run: docker images
